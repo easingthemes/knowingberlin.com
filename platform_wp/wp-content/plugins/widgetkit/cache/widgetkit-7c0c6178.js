@@ -1,0 +1,1 @@
+var widgetkitajax="http://localhost:8888/knowingberlin.com/platform_wp/wp-admin/admin-ajax.php?action=widgetkit&ajax=1";

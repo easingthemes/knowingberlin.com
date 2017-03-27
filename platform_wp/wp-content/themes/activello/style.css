@@ -764,7 +764,7 @@ ul.children, ul.children li {
 /* =Buttons
 ----------------------------------------------- */
 
-.btn-default, .label-default, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .btn.btn-default, button, .input-group-btn:last-child>.btn, input[type=submit] {
+.btn-default, .label-default, .btn.btn-default, button, .input-group-btn:last-child>.btn, input[type=submit] {
     background: #f2f2f2;
     border-color: transparent;
     color: #696969;
@@ -791,12 +791,7 @@ ul.children, ul.children li {
 #subscription-toggle {
     float: right;
 }
-.woocommerce a.button, .woocommerce input.button, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce input.button.alt {
-    width: 100%;
-    text-align: center;
-    line-height: 20px;
-}
-.woocommerce #respond input#submit, .woocommerce button.button.alt, .woocommerce button.button, input[type=submit] {
+input[type=submit] {
     padding: 0 80px;
     text-align: center;
     line-height: 35px;
@@ -1582,49 +1577,6 @@ p.logged-in-as {
     display: block;
 }
 
-/* =Contact form 7
------------------------------------------------ */
-
-.wpcf7 input[type="text"], .wpcf7 input[type="email"], .wpcf7 textarea {
-    border-radius: 0;
-    border: 1px solid #eeeeee;
-    height: 35px;
-    padding: 0 10px;
-    width: 100%;
-}
-.wpcf7 textarea {
-    min-height: 200px;
-    padding: 10px;
-}
-.wpcf7 .wpcf7-form-control-wrap {
-    display: block;
-    margin-bottom: 30px;
-}
-.wpcf7 .wpcf7-submit {
-    height: 35px;
-    background: #f2f2f2;
-    border: 0;
-    border-radius: 0;
-    font-size: 12px;
-    padding: 0 80px;
-    text-transform: uppercase;
-}
-.wpcf7 p {
-    margin: 0;
-}
-
-/* Woocommerce */
-
-.woocommerce .woocommerce-info {
-    border-top-color: #a161bf;
-}
-.woocommerce .woocommerce-info:before {
-    color: #a161bf;
-}
-.related.products {
-    clear: both;
-}
-
 /* Layout */
 
 .has-sidebar-left #secondary {
@@ -1636,4 +1588,10 @@ p.logged-in-as {
 }
 .full-width {
     width: 100%;
+}
+
+
+.top-section {
+    max-height: 413px;
+    overflow: hidden;
 }

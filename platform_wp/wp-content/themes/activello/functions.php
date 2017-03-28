@@ -65,11 +65,6 @@ function activello_setup() {
    */
   add_theme_support( 'post-thumbnails' );
 
-  add_image_size( 'activello-featured', 1170, 550, true );
-  add_image_size( 'activello-slider', 1920, 550, true );
-  add_image_size( 'activello-thumbnail', 330, 220, true );
-  add_image_size( 'activello-medium', 640, 480, true );
-
   // This theme uses wp_nav_menu() in one location.
   register_nav_menus( array(
     'primary'      => esc_html__( 'Primary Menu', 'activello' )
@@ -125,7 +120,7 @@ function activello_setup() {
     remove_theme_mod( 'custom_css' );
   }
 
-  
+
 
 }
 endif; // activello_setup

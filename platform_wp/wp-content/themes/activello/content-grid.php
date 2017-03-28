@@ -17,11 +17,11 @@
 				</div><!-- .entry-meta -->
 				<?php endif; ?>
 			</header><!-- .entry-header -->
-						
+
                         <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
-                                <?php the_post_thumbnail( 'activello-thumbnail', array( 'class' => 'single-featured' )); ?>
+                                <?php the_post_thumbnail( 'thumbnail', array( 'class' => 'single-featured' )); ?>
                         </a>
-                        
+
 			<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 			<div class="entry-summary">
 				<?php the_excerpt(); ?>
@@ -31,7 +31,7 @@
 			<div class="entry-content">
 
 				<?php the_excerpt(); ?>
-				
+
 				<?php
 				wp_link_pages( array(
 					'before'            => '<div class="page-links">'.esc_html__( 'Pages:', 'activello' ),

@@ -30,7 +30,7 @@ function activello_body_classes( $classes ) {
   if ( is_multi_author() ) {
     $classes[] = 'group-blog';
   }
-	
+
 	if ( get_theme_mod( 'activello_sidebar_position' ) == "pull-right" ) {
 		$classes[] = 'has-sidebar-left';
 	} else if ( get_theme_mod( 'activello_sidebar_position' ) == "no-sidebar" ) {
@@ -92,9 +92,9 @@ if ( ! function_exists( 'activello_header_menu' ) ) :
  * Header menu (should you choose to use one)
  */
 function activello_header_menu() {
-    
+
     if( has_nav_menu('primary')){
-        
+
         // display the WordPress Custom Menu if available
         wp_nav_menu(array(
             'menu'              => 'primary',
@@ -106,7 +106,7 @@ function activello_header_menu() {
             'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
             'walker'            => new activello_wp_bootstrap_navwalker()
         ));
-  
+
     }else{
             echo '<ul id="menu-all-pages" class="nav navbar-nav">';
             wp_list_pages(array(
@@ -127,16 +127,16 @@ if ( ! function_exists( 'activello_featured_slider' ) ) :
  */
 function activello_featured_slider() {
   if ( ( is_home() || is_front_page() ) && get_theme_mod( 'activello_featured_hide' ) == 1 ) {
-		
+
 		wp_enqueue_style( 'flexslider-css' );
 		wp_enqueue_script( 'flexslider-js' );
-		
+
     echo '<div class="flexslider">';
       echo '<ul class="slides">';
 
         $slidecat = get_theme_mod( 'activello_featured_cat' );
         $slidelimit = get_theme_mod( 'activello_featured_limit', -1 );
-        $slider_args = array( 
+        $slider_args = array(
             'cat' => $slidecat,
             'posts_per_page' => $slidelimit,
             'meta_query' => array(
@@ -149,11 +149,11 @@ function activello_featured_slider() {
         $query = new WP_Query( $slider_args );
         if ($query->have_posts()) :
           while ($query->have_posts()) : $query->the_post();
-                
+
             if ( (function_exists( 'has_post_thumbnail' )) && ( has_post_thumbnail() ) ) :
 
                 echo '<li>';
-                      echo get_the_post_thumbnail( get_the_ID(), 'activello-slider' );
+                      echo get_the_post_thumbnail( get_the_ID(), 'large' );
 
                     echo '<div class="flex-caption">';
                       echo get_the_category_list();
@@ -164,7 +164,7 @@ function activello_featured_slider() {
                 echo '</li>';
             endif;
 
-        endwhile; 
+        endwhile;
         wp_reset_query();
         endif;
 
@@ -237,7 +237,7 @@ add_filter( 'kses_allowed_protocols' , 'activello_allow_skype_protocol' );
 function activello_cats() {
 	$cats = array();
 	$cats[0] = "All";
-	
+
 	foreach ( get_categories() as $categories => $category ) {
 		$cats[$category->term_id] = $category->name;
 	}
@@ -329,7 +329,7 @@ if (!function_exists('get_activello_theme_setting'))  {
           .woocommerce input.button.alt:hover, .input-group-btn:last-child>.btn:hover, .scroll-to-top:hover,
           button, html input[type=button]:hover, input[type=reset]:hover, .comment-list li .comment-body:after, .page-links a:hover span, .page-links span,
           input[type=submit]:hover, .comment-form #submit:hover, .tagcloud a:hover,
-          .single .entry-content a:hover,  
+          .single .entry-content a:hover,
           .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
           .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus{background-color:' . esc_html( get_theme_mod('accent_color') ) . '; }';
     }

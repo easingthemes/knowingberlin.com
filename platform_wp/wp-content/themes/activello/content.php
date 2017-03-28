@@ -32,7 +32,7 @@
 			</header><!-- .entry-header -->
 
             <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
-                    <?php the_post_thumbnail( 'activello-featured', array( 'class' => 'single-featured' )); ?>
+                    <?php the_post_thumbnail( 'medium', array( 'class' => 'single-featured' )); ?>
             </a>
 
 			<?php if ( is_search() ) : // Only display Excerpts for Search ?>

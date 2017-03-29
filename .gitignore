@@ -15,6 +15,7 @@ platform_wp/wp-content/uploads/
 platform_wp/wp-content/plugins/
 
 !platform_wp/wp-content/themes/*
+platform_wp/wp-content/themes/.DS_Store
 platform_wp/wp-config.php
 
 platform_wp/wp-content/advanced-cache.php

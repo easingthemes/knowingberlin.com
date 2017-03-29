@@ -45,10 +45,10 @@
 						</div>
 						<?php activello_header_menu(); // main navigation ?>
 
-						<div class="nav-search"><?php 
+						<div class="nav-search"><?php
                             add_filter('get_search_form', 'activello_header_search_filter',10,3);
                             echo get_search_form();
-                            remove_filter('get_search_form', 'activello_header_search_filter');?>							
+                            remove_filter('get_search_form', 'activello_header_search_filter');?>
 						</div>
 					</div>
 				</div>
@@ -76,15 +76,15 @@
 		<div class="container">
 			<div id="logo">
 				<?php echo is_home() ?  '<h1 class="site-name">' : '<span class="site-name">'; ?>
-                    
-                <?php 
+
+                <?php
 
                 if( $show_logo && has_custom_logo() ) {
                 	the_custom_logo();
 				}else{?>
 					<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php  bloginfo( 'name' ); ?></a>
 				<?php } ?>
-                    
+
 				<?php echo is_home() ?  '</h1>' : '</span>'; ?><!-- end of .site-name -->
 
 				<?php if( $show_tagline && get_bloginfo( 'description' ) != "" ) : ?>
@@ -104,6 +104,13 @@
 
 		<div class="top-section">
 			<?php activello_featured_slider(); ?>
+
+			<?php if ( is_active_sidebar( 'home_top' ) ) : ?>
+      	<div id="home_top" class="section section__top" role="complementary">
+      		<?php dynamic_sidebar( 'home_top' ); ?>
+      	</div><!-- #top section -->
+      <?php endif; ?>
+
 		</div>
 
 		<div class="container main-content-area">

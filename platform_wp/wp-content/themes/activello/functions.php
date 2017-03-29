@@ -147,6 +147,20 @@ if ( ! function_exists( 'activello_widgets_init' ) ) {
 }
 add_action( 'widgets_init', 'activello_widgets_init' );
 
+function notamagic_widgets_init() {
+
+	register_sidebar( array(
+		'name'          => 'Page top',
+		'id'            => 'page_top',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'notamagic_widgets_init' );
+
 
 /* --------------------------------------------------------------
        Theme Widgets

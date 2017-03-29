@@ -142,7 +142,7 @@ if ( ! function_exists( 'activello_widgets_init' ) ) {
 
     register_widget( 'activello_social_widget' );
     register_widget( 'activello_recent_posts' );
-    register_widget( 'activello_recent_posts_slider' );
+    register_widget( 'notamagic_recent_posts_slider' );
     register_widget( 'activello_categories' );
   }
 }

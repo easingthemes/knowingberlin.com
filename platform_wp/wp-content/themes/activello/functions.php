@@ -159,6 +159,15 @@ function notamagic_widgets_init() {
 		'after_title'   => '</h3>',
 	) );
 
+	register_sidebar( array(
+  		'name'          => 'Language switcher',
+  		'id'            => 'language_switcher',
+  		'before_widget' => '<div>',
+  		'after_widget'  => '</div>',
+  		'before_title'  => '',
+  		'after_title'   => '',
+  	) );
+
 }
 add_action( 'widgets_init', 'notamagic_widgets_init' );
 

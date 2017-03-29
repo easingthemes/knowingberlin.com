@@ -74,6 +74,13 @@
 		}?>
 
 		<div class="container">
+
+		<?php if (is_active_sidebar('language_switcher')) : ?>
+      <div id="language-switcher" class="component language_switcher">
+        <?php dynamic_sidebar( 'language_switcher' ); ?>
+      </div>
+    <?php endif; ?>
+
 			<div id="logo">
 				<?php echo is_home() ?  '<h1 class="site-name">' : '<span class="site-name">'; ?>
 

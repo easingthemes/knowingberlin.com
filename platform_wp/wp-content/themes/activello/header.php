@@ -105,9 +105,9 @@
 		<div class="top-section">
 			<?php activello_featured_slider(); ?>
 
-			<?php if ( is_active_sidebar( 'home_top' ) ) : ?>
+			<?php if ( is_active_sidebar( 'page_top' ) ) : ?>
       	<div id="home_top" class="section section__top" role="complementary">
-      		<?php dynamic_sidebar( 'home_top' ); ?>
+      		<?php dynamic_sidebar( 'page_top' ); ?>
       	</div><!-- #top section -->
       <?php endif; ?>
 

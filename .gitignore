@@ -3,13 +3,23 @@ node_modules
 .DS_Store
 
 *.log
+.htaccess
+platform_wp/*.php
+platform_wp/*.txt
+platform_wp/*.html
+
+platform_wp/wp-admin/
+platform_wp/wp-includes/
+platform_wp/wp-content/upgrade/
+platform_wp/wp-content/uploads/
+platform_wp/wp-content/plugins/
+
+!platform_wp/wp-content/themes/*
 platform_wp/wp-config.php
+
 platform_wp/wp-content/advanced-cache.php
 platform_wp/wp-content/backup-db/
 platform_wp/wp-content/backups/
 platform_wp/wp-content/blogs.dir/
 platform_wp/wp-content/cache/
-platform_wp/wp-content/upgrade/
-platform_wp/wp-content/uploads/
 platform_wp/wp-content/wp-cache-config.php
-platform_wp/wp-content/plugins/hello.php

@@ -3,7 +3,6 @@ node_modules
 .DS_Store
 
 *.log
-.htaccess
 platform_wp/*.php
 platform_wp/*.txt
 platform_wp/*.html

@@ -55,7 +55,7 @@ class notamagic_recent_posts_slider extends WP_Widget
                             }
 
                         ?>
-                        <?php if(get_the_content() != '') : ?>
+                        <?php if(get_the_content() != '' && $featuredimage_values[0]) : ?>
 
                         <!-- post -->
                         <li>

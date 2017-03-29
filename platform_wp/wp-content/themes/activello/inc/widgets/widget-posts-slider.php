@@ -45,8 +45,18 @@ class notamagic_recent_posts_slider extends WP_Widget
                   if($featured_query->have_posts()) : while($featured_query->have_posts()) : $featured_query->the_post();
 
                     ?>
+                        <?php
+                            $showImage = false;
+                            $featuredimage_values = get_post_custom_values('show_featured_image', get_the_ID());
+                            echo $featuredimage_values;
+                            echo $featuredimage_values[0];
+                            foreach ( $featuredimage_values as $key => $value ) {
+                              echo "$key  => $value ( 'my_key' )<br />";
+                            }
 
+                        ?>
                         <?php if(get_the_content() != '') : ?>
+
                         <!-- post -->
                         <li>
                             <?php echo get_the_post_thumbnail( get_the_ID(), 'large' ); ?>

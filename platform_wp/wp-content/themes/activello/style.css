@@ -1595,3 +1595,7 @@ p.logged-in-as {
     max-height: 413px;
     overflow: hidden;
 }
+
+.top-section .widget-title {
+  display: none;
+}

@@ -4,16 +4,16 @@
  * activello Top Posts Slider Widget
  * activello Theme
  */
-class activello_recent_posts_slider extends WP_Widget
+class notamagic_recent_posts_slider extends WP_Widget
 {
-	 function __construct(){
+     function __construct(){
 
-        $widget_ops = array('classname' => 'activello-recent-posts','description' => esc_html__( "Activello recent posts widget with thumbnails", 'activello') );
-		    parent::__construct('activello_recent_posts_slider', esc_html__('Activello Recent Posts Widget','activello'), $widget_ops);
+        $widget_ops = array('classname' => 'activello-recent-posts','description' => esc_html__( "Notamagic recent posts slider", 'activello') );
+            parent::__construct('notamagic_recent_posts_slider', esc_html__('Notamagic Recent Posts Slider','activello'), $widget_ops);
     }
 
     function widget($args , $instance) {
-    	extract($args);
+        extract($args);
         $title = isset($instance['title']) ? esc_html( $instance['title'] ) : esc_html__('recent Posts', 'activello');
         $limit = isset($instance['limit']) ? esc_html( $instance['limit'] ) : 5;
 
@@ -22,14 +22,14 @@ class activello_recent_posts_slider extends WP_Widget
       echo $title;
       echo $after_title;
 
-		/**
-		 * Widget Content
-		 */
+        /**
+         * Widget Content
+         */
     ?>
 
     <!-- recent posts -->
-          <div class="recent-posts-wrapper">
-
+        <div class="flexslider">
+            <ul class="slides">
                 <?php
 
                   $featured_args = array(
@@ -47,43 +47,38 @@ class activello_recent_posts_slider extends WP_Widget
                     ?>
 
                         <?php if(get_the_content() != '') : ?>
-
                         <!-- post -->
-                        <div class="post">
+                        <li>
+                            <?php get_the_post_thumbnail( get_the_ID(), 'large' ); ?>
+                            <div class="flex-caption">
+                                <?php get_the_category_list(); ?>
 
-                          <!-- image -->
-                          <div class="post-image <?php echo get_post_format(); ?>">
-
-                                <a href="<?php echo get_permalink(); ?>"><?php
-                                if(get_post_format() != 'quote') {
-                                  echo get_the_post_thumbnail(get_the_ID() , 'thumbnail');
-                                }
-                                 ?></a>
-
-                          </div> <!-- end post image -->
-
-                          <!-- content -->
-                          <div class="post-content">
-
-                              <a href="<?php echo get_permalink(); ?>"><?php echo get_the_title(); ?></a>
-                              <span class="date">- <?php echo get_the_date('d M , Y'); ?></span>
-
-                          </div><!-- end content -->
-                        </div><!-- end post -->
-
+                                <?php if(get_the_title() != '') : ?>
+                                    <a href="<?php get_permalink() ?>">
+                                        <h2 class="entry-title">
+                                        <?php get_the_title() ?>
+                                        </h2>
+                                    </a>
+                                <?php endif; ?>
+                                <div class="read-more">
+                                    <a href="<?php get_permalink() ?>">
+                                    <?php __( 'Read More', 'activello' ) ?>
+                                    </a>
+                                </div>
+                            </div>
+                        </li><!-- end post -->
                         <?php endif; ?>
 
                     <?php
 
                   endwhile; endif; wp_reset_query();
 
-                 ?>
+                ?>
+            </ul>
+        </div> <!-- end posts wrapper -->
 
-          </div> <!-- end posts wrapper -->
-
-		<?php
-
-		echo $after_widget;
+        <?php
+        echo $after_widget;
     }
 
     function form($instance) {
@@ -91,7 +86,7 @@ class activello_recent_posts_slider extends WP_Widget
       if(!isset($instance['title'])) $instance['title'] = esc_html__('recent Posts', 'activello');
       if(!isset($instance['limit'])) $instance['limit'] = 5;
 
-    	?>
+        ?>
 
       <p><label for="<?php echo $this->get_field_id('title'); ?>"><?php esc_html_e('Title', 'activello') ?></label>
 
@@ -109,25 +104,25 @@ class activello_recent_posts_slider extends WP_Widget
               class="widefat" />
       <p>
 
-    	<?php
+        <?php
     }
 
     /**
-	 * Sanitize widget form values as they are saved.
-	 *
-	 * @see WP_Widget::update()
-	 *
-	 * @param array $new_instance Values just sent to be saved.
-	 * @param array $old_instance Previously saved values from database.
-	 *
-	 * @return array Updated safe values to be saved.
-	 */
-	public function update( $new_instance, $old_instance ) {
-		$instance = array();
-		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? esc_html( $new_instance['title'] ) : '';
-		$instance['limit'] = ( ! empty( $new_instance['limit'] ) && is_numeric( $new_instance['limit'] )  ) ? esc_html( $new_instance['limit'] ) : '';
+     * Sanitize widget form values as they are saved.
+     *
+     * @see WP_Widget::update()
+     *
+     * @param array $new_instance Values just sent to be saved.
+     * @param array $old_instance Previously saved values from database.
+     *
+     * @return array Updated safe values to be saved.
+     */
+    public function update( $new_instance, $old_instance ) {
+        $instance = array();
+        $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? esc_html( $new_instance['title'] ) : '';
+        $instance['limit'] = ( ! empty( $new_instance['limit'] ) && is_numeric( $new_instance['limit'] )  ) ? esc_html( $new_instance['limit'] ) : '';
 
-		return $instance;
-	}
+        return $instance;
+    }
 }
 ?>

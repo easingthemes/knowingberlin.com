@@ -49,20 +49,20 @@ class notamagic_recent_posts_slider extends WP_Widget
                         <?php if(get_the_content() != '') : ?>
                         <!-- post -->
                         <li>
-                            <?php get_the_post_thumbnail( get_the_ID(), 'large' ); ?>
+                            <?php echo get_the_post_thumbnail( get_the_ID(), 'large' ); ?>
                             <div class="flex-caption">
-                                <?php get_the_category_list(); ?>
+                                <?php echo get_the_category_list(); ?>
 
                                 <?php if(get_the_title() != '') : ?>
-                                    <a href="<?php get_permalink() ?>">
+                                    <a href="<?php echo get_permalink() ?>">
                                         <h2 class="entry-title">
-                                        <?php get_the_title() ?>
+                                        <?php echo get_the_title() ?>
                                         </h2>
                                     </a>
                                 <?php endif; ?>
                                 <div class="read-more">
-                                    <a href="<?php get_permalink() ?>">
-                                    <?php __( 'Read More', 'activello' ) ?>
+                                    <a href="<?php echo get_permalink() ?>">
+                                    <?php echo  __( 'Read More', 'activello' ) ?>
                                     </a>
                                 </div>
                             </div>

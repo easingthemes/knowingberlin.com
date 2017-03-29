@@ -1607,7 +1607,7 @@ p.logged-in-as {
 .language-switcher__list {
   position: absolute;
   right: 0;
-  top: 30px;
+  top: 10px;
 }
 
 .language-switcher ul {
@@ -1618,4 +1618,5 @@ p.logged-in-as {
 .language-switcher li {
   display: inline-block;
   list-style: none;
+  margin-left: 10px;
 }

@@ -162,7 +162,7 @@ function notamagic_widgets_init() {
 	register_sidebar( array(
   		'name'          => 'Language switcher',
   		'id'            => 'language_switcher',
-  		'before_widget' => '<div>',
+  		'before_widget' => '<div class="language-switcher__list">',
   		'after_widget'  => '</div>',
   		'before_title'  => '',
   		'after_title'   => '',

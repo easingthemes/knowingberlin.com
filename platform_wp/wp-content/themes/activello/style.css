@@ -1599,3 +1599,23 @@ p.logged-in-as {
 .top-section .widget-title {
   display: none;
 }
+
+.language-switcher {
+  position: relative;
+}
+
+.language-switcher__list {
+  position: absolute;
+  right: 0;
+  top: 30px;
+}
+
+.language-switcher ul {
+  padding: 0;
+  margin: 0;
+}
+
+.language-switcher li {
+  display: inline-block;
+  list-style: none;
+}

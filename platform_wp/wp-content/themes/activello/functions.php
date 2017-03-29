@@ -169,7 +169,7 @@ add_action( 'widgets_init', 'notamagic_widgets_init' );
 require_once(get_template_directory() . '/inc/widgets/widget-categories.php');
 require_once(get_template_directory() . '/inc/widgets/widget-social.php');
 require_once(get_template_directory() . '/inc/widgets/widget-recent-posts.php');
-require_once(get_template_directory() . '/inc/widgets/widget-post-slider.php');
+require_once(get_template_directory() . '/inc/widgets/widget-posts-slider.php');
 
 /**
  * This function removes inline styles set by WordPress gallery.

@@ -11,8 +11,9 @@ platform_wp/wp-admin/
 platform_wp/wp-includes/
 platform_wp/wp-content/upgrade/
 platform_wp/wp-content/uploads/
-platform_wp/wp-content/plugins/
+platform_wp/wp-content/plugins/*.php
 
+!platform_wp/wp-content/plugins/notamagic-slider/*.php
 !platform_wp/wp-content/themes/*
 platform_wp/wp-content/themes/.DS_Store
 platform_wp/wp-config.php

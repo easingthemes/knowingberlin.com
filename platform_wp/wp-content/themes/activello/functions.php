@@ -142,6 +142,7 @@ if ( ! function_exists( 'activello_widgets_init' ) ) {
 
     register_widget( 'activello_social_widget' );
     register_widget( 'activello_recent_posts' );
+    register_widget( 'activello_recent_posts_slider' );
     register_widget( 'activello_categories' );
   }
 }
@@ -168,6 +169,7 @@ add_action( 'widgets_init', 'notamagic_widgets_init' );
 require_once(get_template_directory() . '/inc/widgets/widget-categories.php');
 require_once(get_template_directory() . '/inc/widgets/widget-social.php');
 require_once(get_template_directory() . '/inc/widgets/widget-recent-posts.php');
+require_once(get_template_directory() . '/inc/widgets/widget-post-slider.php');
 
 /**
  * This function removes inline styles set by WordPress gallery.

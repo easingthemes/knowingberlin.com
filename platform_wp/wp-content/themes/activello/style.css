@@ -1626,24 +1626,7 @@ p.logged-in-as {
 }
 
 /* Front End CSS */
-.simple-instagram-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-.simple-instagram-list-item {
-    float: left;
-    margin:  0 10px 10px 0;
-    padding: 0;
-    width: calc((100% - 20px) / 3);
-}
 
-.simple-instagram-list-item:nth-child(3n) {
-    margin-right: 0;
-}
 
-.simple-instagram-list-item img {
-    max-width: 100%;
-    height: auto;
-}
+
 

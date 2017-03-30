@@ -1624,3 +1624,23 @@ p.logged-in-as {
 .language-switcher img {
   width: 25px;
 }
+
+.simple-instagram-list {
+
+}
+
+.simple-instagram-list-item {
+  display: inline-block;
+  width: 32%;
+  margin: 10px 0;
+}
+
+.simple-instagram-list-item:nth-child(3n + 2) {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.simple-instagram-list img {
+  max-width: 100%;
+  height: auto;
+}

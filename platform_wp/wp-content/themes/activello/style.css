@@ -1620,3 +1620,7 @@ p.logged-in-as {
   list-style: none;
   margin-left: 10px;
 }
+
+.language-switcher img {
+  width: 25px;
+}

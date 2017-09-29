@@ -1,0 +1,119 @@
+/* Admin CSS */
+#si-wrap h1 {
+    margin: 0 0 20px;
+}
+#si-wrap fieldset {
+    border: #b9b9b9 1px solid;
+    width: 70%;
+    padding: 15px;
+    margin: 0 0 30px;
+    float: left;
+}
+#si-wrap label {
+    font-weight: bold;
+    color: #000;
+}
+.si-row {
+    margin: 0 0 20px;
+    overflow: hidden;
+}
+#si-wrap .si-left-col {
+    width: 30%;
+    float: left;
+}
+#si-wrap .si-right-col {
+    width: 70%;
+    float: right;
+}
+.si-get-btn {
+    background: url(../images/instagram.png) no-repeat 11px 10px #d12d8f;
+    color: #fff !important;
+    text-decoration: none;
+    background-size: 120px auto;
+    padding: 0 13px 0 141px;
+    line-height: 45px;
+    display: inline-block;
+    border-radius: 11px;
+    margin: 0 0 10px;
+    transition: background-color, 500ms;
+}
+.si-get-btn:hover {
+    background-color: #ec3da6;
+}
+.si-options div {
+    margin: 0;
+}
+.si-options div label {
+    width: 60px;
+    display: inline-block;
+    position: relative;
+    top: -2px;
+}
+.si-what {
+    font-size: 15px;
+    margin: 0 0 0 5px;
+    box-shadow: none !important;
+}
+.si-right-col .large-text {
+    width: 95%;
+}
+.si-info-box {
+    background: #222222;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #fff;
+    margin: 10px 0 !important;
+    clear: both;
+    display: none;
+}
+.si-info-box p {
+    margin: 0;
+    font-size: 12px;
+}
+.si-how {
+    clear: both;
+}
+.si-how ul {
+    list-style: disc;
+    margin: 0 0 0 20px;
+}
+.si-code {
+    border-radius: 5px;
+    background: #fff;
+    padding: 5px 10px;
+    margin: 0 0 25px;
+}
+.si-code p {
+    margin: 5px 0;
+}
+.si-code label {
+    width: 101px;
+    display: inline-block;
+}
+.si-note {
+    padding: 10px 0 0;
+}
+.si-code span {
+    color: red;
+    font-weight: bold;
+}
+
+/* box */
+.si-box {
+    float: right;
+    width: 26%;
+    padding: 0 20px;
+    background: #fff;
+    box-sizing: border-box;
+    margin: 8px 0 10px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+}
+.si-box h2 {
+    margin-bottom: 0
+}
+.si-box .fa-star {
+    color: #ffb900;
+}
+.si-box .fa-heart {
+    color: #eb4b59;
+}
